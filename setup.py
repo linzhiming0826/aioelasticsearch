@@ -8,7 +8,7 @@ from setuptools import setup
 def get_version():
     regex = r"__version__\s=\s\'(?P<version>[\d\.]+?)\'"
 
-    path = ('aioelasticsearch', '__init__.py')
+    path = ('aioelasticsearch_fork', '__init__.py')
 
     return re.search(regex, read(*path)).group('version')
 
@@ -21,7 +21,7 @@ def read(*parts):
 
 
 setup(
-    name='aioelasticsearch',
+    name='aioelasticsearch_fork',
     version=get_version(),
     author='wikibusiness',
     author_email='osf@wikibusiness.org',
@@ -33,7 +33,7 @@ setup(
         'aiohttp>=3.5.0,<4.0.0',
     ],
     python_requires='>=3.5.3',
-    packages=['aioelasticsearch'],
+    packages=['aioelasticsearch_fork'],
     include_package_data=True,
     zip_safe=False,
     classifiers=[
